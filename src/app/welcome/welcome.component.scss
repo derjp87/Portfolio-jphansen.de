@@ -22,6 +22,10 @@
         color:#e35d29;
     }
 
+    a {
+        text-decoration: none;
+    }
+    
     .link-contact {
         color: #2DFCD8;
         margin-top: 50px;
@@ -34,10 +38,16 @@
         align-items: center;
         cursor: pointer;
 
+        
+
         &:hover {
             background-color: #2DFCD8;
             color: black;
+
+           
         }
+
+
     }
 
     img {
