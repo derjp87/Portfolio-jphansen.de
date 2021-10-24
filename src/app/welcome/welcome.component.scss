@@ -7,29 +7,6 @@
     align-items: center;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-
-    a {
-        color: white;
-        text-decoration: none;
-        margin-left: 32px;
-        font-weight: 400;
-        font-size: 20px;
-
-        &:hover {
-            color: #e35d29;
-        }
-    }
-}
-
-.logo {
-    width: 200px;
-}
-
 .welcome-main {
     color: white;
     font-size: 64px;
