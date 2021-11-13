@@ -16,17 +16,7 @@
     display: block;
     margin-top: 32px;
 
-    .button-disabled {
-        min-width: 100px;
-        min-height: 50px;
-        margin: 10px;
-        color: black;
-        background-color: #e35d29;
-        border: 2px solid black;
-        cursor: not-allowed;
-    }
-
-    .button-active {
+    button {
         min-width: 100px;
         min-height: 50px;
         margin: 10px;
@@ -40,6 +30,11 @@
             color: black;
         }
     }
+}
+
+.button-selected {
+    background-color: #e35d29 !important;
+    color: black !important;
 }
 
 .projects-box {

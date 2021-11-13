@@ -3,12 +3,12 @@
         Meine Projekte
     </div>
     <div class="projects-buttons">
-        <button class="button-disabled">Alle</button>
-        <button class="button-active">Angular</button>
-        <button class="button-active">JavaScript</button>
+        <button [class.button-selected]="showAll" (click)="showAllProjects()">Alle</button>
+        <button [class.button-selected]="showAngular && !showAll" (click)="showAngularProjects()">Angular</button>
+        <button [class.button-selected]="showJavaScript && !showAll" (click)="showJavaScriptProjects()">JavaScript</button>
     </div>
     <div class="projects-box">
-        <div (mouseenter)="showDetails1=true" (mouseleave)="showDetails1=false" class="project">
+        <div *ngIf="showAll || showJavaScript" (mouseenter)="showDetails1=true" (mouseleave)="showDetails1=false" class="project">
             <div *ngIf="showDetails1" class="project-details">
                 <h2>Project Name</h2>
                 <p>Project Beschreibung</p>
@@ -16,7 +16,7 @@
             </div>
             <img src="assets/img/project-changeme.png">
         </div>
-        <div (mouseenter)="showDetails2=true" (mouseleave)="showDetails2=false" class="project">
+        <div *ngIf="showAll || showJavaScript" (mouseenter)="showDetails2=true" (mouseleave)="showDetails2=false" class="project">
             <div *ngIf="showDetails2" class="project-details">
                 <h2>Project Name</h2>
                 <p>Project Beschreibung</p>
@@ -24,7 +24,7 @@
             </div>
             <img src="assets/img/project-changeme.png">
         </div>
-        <div (mouseenter)="showDetails3=true" (mouseleave)="showDetails3=false" class="project">
+        <div *ngIf="showAll || showJavaScript" (mouseenter)="showDetails3=true" (mouseleave)="showDetails3=false" class="project">
             <div *ngIf="showDetails3" class="project-details">
                 <h2>Project Name</h2>
                 <p>Project Beschreibung</p>
@@ -32,7 +32,7 @@
             </div>
             <img src="assets/img/project-changeme.png">
         </div>
-        <div (mouseenter)="showDetails4=true" (mouseleave)="showDetails4=false" class="project">
+        <div *ngIf="showAll || showAngular" (mouseenter)="showDetails4=true" (mouseleave)="showDetails4=false" class="project">
             <div *ngIf="showDetails4" class="project-details">
                 <h2>Project Name</h2>
                 <p>Project Beschreibung</p>
