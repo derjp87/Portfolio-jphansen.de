@@ -22,17 +22,20 @@
 .about-sub {
     display: flex;
     justify-content: center;
-    align-items: center;
+    
     margin-top: 50px;
 }
 
 .sub-slot {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    
     align-items: center;
     text-align: center;
     padding: 20px;
+    width: 300px;
+
+    
 }
 
 .left {
