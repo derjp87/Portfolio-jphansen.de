@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-projects',
@@ -15,7 +16,7 @@ export class ProjectsComponent implements OnInit {
   showAngular: boolean;
   showJavaScript: boolean;
 
-  constructor() { 
+  constructor(public ls: LanguageService) { 
     this.showDetails1 = false;
     this.showDetails2 = false;
     this.showDetails3 = false;

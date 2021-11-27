@@ -10,10 +10,13 @@
 
 .projects-headline {
     font-size: 32px;
+    display: flex;
+    justify-content: center;
 }
 
 .projects-buttons {
-    display: block;
+    display: flex;
+    justify-content: center;
     margin-top: 32px;
 
     button {

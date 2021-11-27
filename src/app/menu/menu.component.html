@@ -4,10 +4,24 @@
         <img routerLink="/" class="logo" src="assets/img/jphansen.png">
     </div>
     <div class="menu">
-        <a routerLink="/">Home</a>
-        <a href="#skills">Meine Skills</a>
-        <a href="#projects">Meine Projekte</a>
-        <a href="#about">Über mich</a>
+        
+        <div *ngIf="ls.german">
+            <a class="menu-animation before after" href="#projects">PORTFOLIO</a>
+            <a class="menu-animation before after" href="#about">ÜBER MICH</a>
+            <a class="menu-animation before after" href="#contact">KONTAKT</a>
+        </div>
+    
+        <div *ngIf="ls.english">
+            <a class="menu-animation before after" href="#projects">PORTFOLIO</a>
+            <a class="menu-animation before after" href="#about">ABOUT</a>
+            <a class="menu-animation before after" href="#contact">CONTACT</a>            
+    </div>
+
+    <div class="language-selection">
+        <div (click)="ls.selectGerman()"><a class="no-margin">DE</a></div>
+        <div (click)="ls.selectEnglish()"><a class="no-margin">EN</a></div>
+    </div>
+    
     </div>
 </div>
 </div>

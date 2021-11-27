@@ -1,13 +1,21 @@
 .menu-content {
-    background-color: black;
+    background: black;  
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; 
+    padding-top: 5px;
+    padding-bottom: 0px;
     position: absolute;
     left: 0;
     right: 0;
+    top: 0;
     z-index: 4;
+}
+
+.menu {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
 }
 
 .header {
@@ -25,7 +33,7 @@
         font-size: 20px;
 
         &:hover {
-            color: #e35d29;
+            color: #d73444;
         }
     }
 }
@@ -33,3 +41,136 @@
 .logo {
     width: 200px;
 }
+
+.language-selection {
+    color: white;
+    border: 1px solid white;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 20px;
+    -webkit-transition : border 500ms ease-out;
+  -moz-transition : border 500ms ease-out;
+  -o-transition : border 500ms ease-out;
+  transition : border 500ms ease-out;
+
+    &:hover {
+        border: 1px solid #FA2759;
+        
+    }
+
+    div {
+        &:hover {
+            color: #FA2759;
+            cursor: pointer;
+        }
+    }
+}
+
+a,a:visited,a:hover,a:active{
+    -webkit-backface-visibility:hidden;
+            backface-visibility:hidden;
+      position:relative;
+    transition:0.5s color ease;
+      text-decoration:none;
+      color:white;
+     
+  }
+  a:hover{
+      color:#d73444;
+  }
+  a.before:before,a.after:after{
+    content: "";
+    transition:0.5s all ease;
+    -webkit-backface-visibility:hidden;
+            backface-visibility:hidden;
+    position:absolute;
+  }
+  a.before:before{
+    top:-0.25em;
+  }
+  a.after:after{
+    bottom:-0.25em;
+  }
+  a.before:before,a.after:after{
+    height:2px;
+    width:0;
+    background:#d73444;
+  }
+  
+  a.menu-animation:before{
+    right:0;
+  }
+  a.menu-animation:after{
+    left:0;
+  }
+  
+  a.before:hover:before,a.after:hover:after{
+    width:100%;
+  }
+
+  .no-margin {
+    margin: 0px !important;
+}
+
+ @media(max-width:760px) {
+     .logo {
+         display: none;
+     }
+ }
+
+  @media(max-width:650px) {
+    
+    .menu {
+        padding-bottom: 4px;
+    }
+
+    .img-a {
+        display: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .header {
+        justify-content: space-evenly;
+    }
+}
+
+@media(max-width:555px) {
+    a {
+        font-size: 3vw !important;
+    }
+}
+
+@media(max-width:400px) {
+    .header {
+        a {
+            margin-left: 10px;
+        }
+    }
+
+    a {
+        font-size: 4vw !important;
+    }
+
+    .language-selection {
+        margin-left: 10px;
+    }
+}
+
+@media(max-width:390px) {
+    a {
+        font-size: 4vw;
+        margin-right: 10px !important;
+        margin-left: 0px !important;
+    }
+}
+
+@media(max-width:295px) {
+    a {
+        font-size: 3.5vw !important;
+        
+    }
+}
+

@@ -2,21 +2,46 @@
     <div>
 
     </div>
-    <div class="welcome-main">
-        <div>
+
+    <div *ngIf="ls.german" class="welcome-main">
+        <div class="greeting">
             Hi,<br>
             Ich bin <p>Jan Philip</p> Hansen<br>
-            Front End Developer
+            Front End Entwickler
 
             <a href="#contact"><div class="link-contact">
                 Kontaktiere mich
             </div></a>
         </div>
-        <div>
-            <img src="assets/img/me.jpg">
+        <div class="img-container">
+            <img class="profile" src="assets/img/me.jpg">
         </div>
     </div>
-    <div class="arrow-down">
-        <img src="assets/img/arrow-down.png">
+
+    <div *ngIf="ls.english" class="welcome-main">
+        <div class="greeting">
+            Hi,<br>
+            I'm <p>Jan Philip</p> Hansen<br>
+            Front End Developer
+
+            <a href="#contact"><div class="link-contact">
+                Contact me
+            </div></a>
+        </div>
+        <div class="img-container">
+            <img class="profile" src="assets/img/me.jpg">
+        </div>
     </div>
+
+<a href="#skills">
+    <div class="continue_container">
+
+        <div class="continue">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+        </div>
+
+    </div>
+</a>
 </div>
