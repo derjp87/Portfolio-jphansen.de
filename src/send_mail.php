@@ -3,7 +3,6 @@
 ########### CONFIG ###############
 
 $recipient = 'mailto@jphansen.de';
-$redirect = 'success.html';
 
 ########### CONFIG END ###########
 
@@ -39,11 +38,11 @@ switch ($_SERVER['REQUEST_METHOD']) {
     case ("POST"): //Send the email;
         header("Access-Control-Allow-Origin: *");
 
-        $subject = "Contact From " . $_POST['name'];
+        $subject = "Contact From " . $_POST['name'].' ('.$_POST['email'].')';
         $headers = "From:  contactme@jphansen.de";
 
         mail($recipient, $subject, $_POST['message'], $headers);
-        header("Location: " . $redirect); 
+        //header("Location: " . $redirect); 
 
 
         break;
